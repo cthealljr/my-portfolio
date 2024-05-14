@@ -1,0 +1,149 @@
+<!--
+ Copyright (c) 2024 Charles Theall Jr
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!DOCTYPE html>
+<html color-mode="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Main CSS Stylesheet -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Third-party CSS Stylesheets -->
+    <link rel="stylesheet" href="./css/fontawesome/all.min.css">
+
+    <!-- JavaScript to handle color-mode on page load -->
+    <script>
+        // Handle stored user color-mode preference (including OS)
+        // Light mode is assumed by default
+        if (localStorage.getItem("color-mode") === "dark" || window.matchMedia("(prefers-color-scheme: dark)").matches && !localStorage.getItem("color-mode")) {
+            document.documentElement.setAttribute("color-mode", "dark")
+        }
+    </script>
+</head>
+
+<body>
+    <header id="top">
+        <nav>
+            <h1>Charles Theall Jr</h1>
+            <ul class="navigation-items">
+                <li class="navigation-item"><a href="#about-me">About Me</a></li>
+                <li class="navigation-item"><a href="#projects">Projects</a></li>
+                <li class="navigation-item"><a href="#skills">Skills</a></li>
+                <li class="navigation-item"><a href="#education">Education</a></li>
+                <li class="navigation-item"><a href="#contact">Contact</a></li>
+            </ul>
+            <button type="button" id="css-mode-toggle" title="Toggle Light/Dark mode">
+                <i class="fa-regular fa-sun css-mode-toggle-icon-small"></i>
+                <i class="fa-solid fa-toggle-off dark-hidden css-mode-toggle-icon"></i>
+                <i class="fa-solid fa-toggle-on light-hidden css-mode-toggle-icon"></i>
+                <i class="fa-regular fa-moon css-mode-toggle-icon-small"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Hello, my name is Charles, and I am an aspiring software developer.</p>
+            <p>I am passionate about creating
+                innovative solutions using technology to solve real-world problems.</p>
+            <p>I am constantly learning and
+                expanding my skills in programming languages such as Go, Python, and JavaScript.</p>
+            <p>I enjoy working on both
+                frontend and backend development and love the challenge of turning ideas into functional, user-friendly
+                software.</p>
+            <p>Outside of coding, I enjoy spending time with my family and playing the guitar.</p>
+            <p>I am dedicated
+                to continuous growth and improvement in both my personal and professional life.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <details class="project">
+                <summary class="project-title">
+                    <h3>My Portfolio Website</h3>
+                </summary>
+                <p>My portfolio website is designed using a combination of HTML for
+                    structuring, CSS for styling, JavaScript for interactivity, and <a target="_blank"
+                        href="https://fontawesome.com">Font Awesome</a> for iconography.
+                </p>
+                <p>Uses a simple two-color color palette providing high-contrast with support for Light/Dark modes.</p>
+                <p>Hosted on GitHub Pages.</p>
+                <a href="https://github.com/cthealljr/my-portfolio">Project on <i
+                        class="fa-brands fa-github icon"></i></a>
+            </details>
+            <details class="project">
+                <summary class="project-title">
+                    <h3>E-commerce REST API (Work in Progress)</h3>
+                </summary>
+                <p class="project-description">A work-in-progress E-commerce REST API utilizing JavaScript, Express, Node.js, and PostgreSQL.</p>
+                <a href="https://github.com/cthealljr/ecommerce-rest-api-js">Project on <i class="fa-brands fa-github icon"></i></a>
+            </details>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <section>
+                <h3>Primary</h3>
+                <ul class="skills-container">
+                    <li><i class="fa-brands fa-golang icon" title="Go"></i></li>
+                    <li><i class="fa-brands fa-python icon" title="Python"></i></li>
+                    <li><i class="fa-brands fa-git icon" title="Git"></i></li>
+                    <li><i class="fa-solid fa-terminal icon" title="Command-line"></i></li>
+                    <li><i class="fa-brands fa-debian icon" title="Debian GNU/Linux"></i></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Secondary</h3>
+                <ul class="skills-container">
+                    <li><i class="fa-brands fa-html5 icon" title="HTML 5"></i></li>
+                    <li><i class="fa-brands fa-css3-alt icon" title="CSS 3"></i></li>
+                    <li><i class="fa-brands fa-js icon" title="JavaScript"></i></li>
+                    <li>SQL</li>
+                    <li>Ansible</li>
+                </ul>
+            </section>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p><a class="links-item" target="_blank" href="https://www.codecademy.com/profiles/cthealljr">Codecademy -
+                    Online Courses</a></p>
+            <section>
+                <h3>Certifications</h3>
+                <div class="certifications-container">
+                    <a class="certifications-item" target="_blank"
+                        href="https://www.codecademy.com/profiles/cthealljr/certificates/ffd0f42cce1a44e9a0108b365047a0a6">Full-Stack
+                        Engineer (Codecademy)</a>
+                </div>
+            </section>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="links-container">
+                <a class="links-item" href="mailto:charles.theall.jr@gmail.com" title="Email Charles Theall Jr"><i
+                        class="fa-solid fa-square-envelope icon"></i></a>
+                <a class="links-item" target="_blank" title="GitHub - Charles Theall Jr"
+                    href="https://github.com/cthealljr"><i class="fa-brands fa-github icon"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#top" title="Top of Page"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
+
+    <!-- Main JavaScript module -->
+    <script type="module" src="./js/index.mjs"></script>
+</body>
+
+</html>

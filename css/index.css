@@ -1,0 +1,208 @@
+/**
+ * Copyright (c) 2024 Charles Theall Jr
+ * 
+ * This software is released under the MIT License.
+ * https://opensource.org/licenses/MIT
+ */
+
+/* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    color: var(--font-color);
+}
+
+:root {
+    /* Common spacings */
+    --spacing-1: 8px;
+    --spacing-2: 12px;
+    --spacing-3: 16px;
+    --spacing-4: 24px;
+
+    /* Common Colors */
+    --color-1: #1a1a1a;
+    --color-2: #f5f5f5;
+}
+
+/* Light Color Mode */
+
+:root[color-mode="light"] {
+    --font-color: var(--color-1);
+    --background-color: var(--color-2);
+}
+
+:root[color-mode="light"] .light-hidden {
+    display: none;
+}
+
+/* Dark Color Mode */
+
+:root[color-mode="dark"] {
+    --font-color: var(--color-2);
+    --background-color: var(--color-1);
+}
+
+:root[color-mode="dark"] .dark-hidden {
+    display: none;
+}
+
+/* General Styles (Continued) */
+
+body {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    font-family: "Arial", sans-serif;
+}
+
+section {
+    padding: var(--spacing-3) 0;
+}
+
+a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer {
+    text-align: right;
+}
+
+.icon {
+    font-size: 2em;
+    color: var(--font-color);
+}
+
+/* Navigation Styles */
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-items {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+}
+
+.navigation-item {
+    margin: 0 var(--spacing-1);
+}
+
+/* Projects Styles */
+
+.project-title h3 {
+    display: inline;
+}
+
+#projects>details>summary {
+    cursor: pointer;
+}
+
+#projects>details[open] {
+    margin-bottom: var(--spacing-4);
+}
+
+/* Skills Styles */
+
+.skills-container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#skills>section {
+    padding: 0;
+}
+
+#skills>section>h3 {
+    padding-left: 1em;
+    font-style: italic;
+}
+
+.skills-container>li {
+    list-style: none;
+    margin-bottom: var(--spacing-1);
+}
+
+/* Education Styles */
+
+#education>section {
+    padding: 0;
+}
+
+#education>section>h3 {
+    font-style: italic;
+}
+
+.certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.certifications-item {
+    margin-right: 15px;
+}
+
+/* Contact Links Styles */
+
+.links-container {
+    display: flex;
+    margin-left: 3px;
+}
+
+.links-item {
+    margin-right: 15px;
+}
+
+/* CSS Toggle Styles */
+
+#css-mode-toggle {
+    border: 0;
+    background-color: var(--background-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--font-color);
+}
+
+.css-mode-toggle-icon {
+    font-size: 1.8em;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.css-mode-toggle-icon-small {
+    font-size: 1.2em;
+}
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (max-width: 550px) {
+    nav {
+        display: block;
+    }
+
+    .skills-container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        max-width: 90%;
+    }
+}
